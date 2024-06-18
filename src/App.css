@@ -8,7 +8,7 @@
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .button button:first-child{
     width: 100px;
@@ -24,4 +24,7 @@
     color: white;
     border-radius: 4px;
     margin-left: 5px;
+}
+.kun span{
+    font-size: 14px;
 }

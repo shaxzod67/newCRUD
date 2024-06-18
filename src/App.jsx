@@ -126,6 +126,18 @@ function App() {
       return error
     }
   }
+  // Hozirgi vaqtni olish
+  let hozir = new Date();
+
+  // Yil, kun, soat, daqiqalar va sekundlarni olish
+  let yil = hozir.getFullYear();
+  let oy = hozir.getMonth() + 1; // Oylar 0 dan 11 gacha sanalgan, shuning uchun +1 qo'shish kerak
+  let kun = hozir.getDate();
+  let soat = hozir.getHours();
+  let daqiqa = hozir.getMinutes();
+  let sekund = hozir.getSeconds();
+
+  
 
   return (
     <>
@@ -185,6 +197,7 @@ function App() {
 
 
               {
+
                 fetchdata.map((data) => {
                   return (
                     <>
@@ -193,7 +206,10 @@ function App() {
                           <img alt="content" class="object-cover object-center h-full w-full" src={data.img} />
                         </div>
                         <h2 class="text-xl font-medium title-font text-white mt-5">Ism: {data.ism}</h2>
-                        <p class="text-base leading-relaxed mt-2">E-mail: {data.email}</p>
+                        <p class="text-base leading-relaxed mt-2 text-white">E-mail: {data.email}</p>
+                       <div className="kun">
+                       <span> {kun}.0{oy}.{yil} yil</span> <span>{soat}:{daqiqa}:{sekund}s</span>
+                       </div>
                         <div className="button">
                           <button onClick={() => ozgar(data.id)} ><a href="#rr">Update</a></button>
                           <button onClick={() => del(data.id)}>Delete</button>
