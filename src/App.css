@@ -47,5 +47,9 @@
     justify-content: space-between;
 }
 .kun span {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     font-size: 14px;
+    column-gap: 5px;
 }

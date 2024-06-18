@@ -6,6 +6,7 @@ import { doc, updateDoc, deleteDoc, getDocs, collection, addDoc, onSnapshot } fr
 import { notification, Button } from 'antd'
 import { MdOutlineModeEditOutline } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { GoClock } from "react-icons/go";
 import './App.css'
 
 function App() {
@@ -139,7 +140,7 @@ function App() {
   let daqiqa = hozir.getMinutes();
   let sekund = hozir.getSeconds();
 
-  
+
 
   return (
     <>
@@ -209,9 +210,9 @@ function App() {
                         </div>
                         <h2 class="text-xl font-medium title-font text-white mt-5">Ism: {data.ism}</h2>
                         <p class="text-base leading-relaxed mt-2 text-white">E-mail: {data.email}</p>
-                       <div className="kun">
-                       <span> {kun}.0{oy}.{yil} yil</span> <span>{soat}:{daqiqa}:{sekund}s</span>
-                       </div>
+                        <div className="kun">
+                          <span> {kun}.0{oy}.{yil} yil</span> <span> {<GoClock /> } : {soat}:{daqiqa}:{sekund}s</span>
+                        </div>
                         <div className="button">
                           <button onClick={() => ozgar(data.id)} ><a href="#rr">Update{<MdOutlineModeEditOutline />}</a></button>
                           <button onClick={() => del(data.id)}>Delete{<RiDeleteBin6Line />}
