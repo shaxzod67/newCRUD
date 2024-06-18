@@ -33,18 +33,20 @@ function App() {
     }
     else {
       if (malumotJonatish) {
+        setIsm('');
+        setEmail('');
+        setImg('');
         return notification.success({
           message: "Malumot jonatildi",
           description: "Siz kiritgan malumotlar yuborildi"
+
         });
       }
-     else{
+      else {
 
-     }
+      }
     }
-    setIsm('');
-    setEmail('');
-    setImg('');
+
 
   }
 
