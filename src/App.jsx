@@ -4,6 +4,8 @@ import { db } from "./firebase";
 import { useEffect, useState } from 'react'
 import { doc, updateDoc, deleteDoc, getDocs, collection, addDoc, onSnapshot } from "firebase/firestore";
 import { notification, Button } from 'antd'
+import { MdOutlineModeEditOutline } from "react-icons/md";
+import { RiDeleteBin6Line } from "react-icons/ri";
 import './App.css'
 
 function App() {
@@ -211,8 +213,9 @@ function App() {
                        <span> {kun}.0{oy}.{yil} yil</span> <span>{soat}:{daqiqa}:{sekund}s</span>
                        </div>
                         <div className="button">
-                          <button onClick={() => ozgar(data.id)} ><a href="#rr">Update</a></button>
-                          <button onClick={() => del(data.id)}>Delete</button>
+                          <button onClick={() => ozgar(data.id)} ><a href="#rr">Update{<MdOutlineModeEditOutline />}</a></button>
+                          <button onClick={() => del(data.id)}>Delete{<RiDeleteBin6Line />}
+                          </button>
                         </div>
 
                       </div>
