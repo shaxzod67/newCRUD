@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+.button{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.button button:first-child{
+    width: 100px;
+    height: 35px;
+    background:rgb(34 197 94);
+    color: white;
+    border-radius: 4px;
+}
+.button button{
+    width: 100px;
+    height: 35px;
+    background:red;
+    color: white;
+    border-radius: 4px;
+    margin-left: 5px;
+}
